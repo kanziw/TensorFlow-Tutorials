@@ -2,7 +2,28 @@
 
 ## 2018.01.23
 
-### Install python via pyenv
+### Using docker
+
+```bash
+❯ docker build . -t ml
+❯ docker run -it ml bash
+
+root@ea6922ca57e3:/# cd 03\ -\ TensorFlow\ Basic/
+root@ea6922ca57e3:/03 - TensorFlow Basic# python 01\ -\ Basic.py
+/usr/local/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+Tensor("Const:0", shape=(), dtype=string)
+Tensor("Add:0", shape=(), dtype=int32)
+2018-01-23 02:13:08.180979: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+b'Hello, TensorFlow!'
+[10, 32, 42]
+```
+
+### In terminal
+
+> Docker 를 이용하는 경우 아래 내용은 생략 가능
+
+#### Install python via pyenv
 
 > https://github.com/pyenv/pyenv#homebrew-on-mac-os-x
 
@@ -33,7 +54,7 @@ Python 3.6.4
 Python 2.7.10
 ```
 
-### Install virtualenv
+#### Install virtualenv
 
 ```bash
 ❯ brew install --HEAD pyenv-virtualenv
@@ -59,7 +80,7 @@ pyenv-virtualenv: remove /Users/david/.pyenv/versions/3.6.4/envs/test? y
 ❯ pyenv virtualenvs
 ```
 
-### Install Tensorflow & Libraries
+#### Install Tensorflow & Libraries
 
 ```bash
 ❯ pyenv virtualenv 3.6.4 ml
