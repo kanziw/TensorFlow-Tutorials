@@ -1,3 +1,70 @@
+# From kanziw
+
+## 2018.01.23
+
+### Install python via pyenv
+
+> https://github.com/pyenv/pyenv#homebrew-on-mac-os-x
+
+```bash
+❯ brew update
+❯ brew install pyenv
+
+❯ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+❯ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+❯ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+❯ exec "$SHELL"
+
+# list all versions and install
+❯ pyenv install -l
+❯ pyenv install 3.6.4
+
+❯ pyenv versions
+  system
+* 3.6.4 (set by PYENV_VERSION environment variable)
+
+❯ python -V
+Python 2.7.10
+❯ pyenv shell 3.6.4
+❯ python -V
+Python 3.6.4
+❯ python shell system
+❯ python -V
+Python 2.7.10
+```
+
+### Install virtualenv
+
+```bash
+❯ brew install --HEAD pyenv-virtualenv
+❯ eval "$(pyenv init -)"
+❯ eval "$(pyenv virtualenv-init -)"
+
+# Activate virtual evn
+❯ pyenv virtualenv 3.6.4 test
+❯ pyenv activate test
+test ❯ python -V
+Python 3.6.4
+# Deactivate
+test ❯ pyenv deactivate
+
+# list Virtualenvs
+❯ pyenv virtualenvs
+  3.6.4/envs/test (created from /Users/david/.pyenv/versions/3.6.4)
+  test (created from /Users/david/.pyenv/versions/3.6.4)
+
+# Delete virtualenv
+❯ pyenv uninstall test
+pyenv-virtualenv: remove /Users/david/.pyenv/versions/3.6.4/envs/test? y
+❯ pyenv virtualenvs
+```
+
+
+
+
+
+---
+
 # TensorFlow Tutorials
 
 텐서플로우를 기초부터 응용까지 단계별로 연습할 수 있는 소스 코드를 제공합니다.
