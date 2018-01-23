@@ -59,7 +59,17 @@ pyenv-virtualenv: remove /Users/david/.pyenv/versions/3.6.4/envs/test? y
 ❯ pyenv virtualenvs
 ```
 
+### Install Tensorflow & Libraries
 
+```bash
+❯ pyenv virtualenv 3.6.4 ml
+❯ pyenv activate ml
+ml ❯ python -V
+Python 3.6.4
+
+ml ❯ pip3 install --upgrade tensorflow
+ml ❯ pip3 install numpy matplotlib pillow
+```
 
 
 
