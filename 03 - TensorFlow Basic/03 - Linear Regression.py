@@ -4,6 +4,16 @@ import tensorflow as tf
 x_data = [1, 2, 3]
 y_data = [1, 2, 3]
 
+# 더 정확하게 값이 나옴
+# x_data = [-3, -2, -1, 0, 1, 2, 3]
+# y_data = [-3, -2, -1, 0, 1, 2, 3]
+
+# learning_rate 를 0.01 로 줄였을 때 성공
+# x_data = [1, 2, 3, 4, 5]
+# y_data = [1, 2, 3, 4, 5]
+
+# 최적화 횟수를 늘리면 더 정확한 W & b 값을 구할 수 있음 확인
+
 W = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 b = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 
