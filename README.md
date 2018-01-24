@@ -5,8 +5,8 @@
 ### Using docker
 
 ```bash
-❯ docker build . -t ml
-❯ docker run -it ml bash
+❯ docker build . -t ml:3.6.4
+❯ docker run -v `pwd`:'/examples' -it ml:3.6.4 bash
 
 root@ea6922ca57e3:/# cd 03\ -\ TensorFlow\ Basic/
 root@ea6922ca57e3:/03 - TensorFlow Basic# python 01\ -\ Basic.py
