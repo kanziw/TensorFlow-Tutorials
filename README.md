@@ -6,7 +6,7 @@
 
 ```bash
 ❯ docker build . -t ml:3.6.4
-❯ docker run -v `pwd`:'/examples' -it ml:3.6.4 bash
+❯ docker run -v `pwd`:'/examples' -p 6006:6006 -it ml:3.6.4 bash
 
 root@ea6922ca57e3:/# cd 03\ -\ TensorFlow\ Basic/
 root@ea6922ca57e3:/03 - TensorFlow Basic# python 01\ -\ Basic.py
