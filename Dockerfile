@@ -5,3 +5,6 @@ RUN pip3 install --upgrade tensorflow
 RUN pip3 install numpy matplotlib pillow
 
 WORKDIR /examples
+
+RUN mkdir -p /Library/Fonts
+RUN ln -s `pwd`/NanumGothic.otf /Library/Fonts/NanumGothic.otf
